@@ -11,3 +11,14 @@ let iife = () => {  return new Promise ((resolve,reject)=>{
     console.log(c);
 }) ();
 
+let iifes = () => {
+setTimeout(() => {
+    resolve (456);
+},4000)
+};
+
+(async () => {
+    let c= await iifes()
+    console.log(c)
+}) ();
+

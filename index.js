@@ -21,7 +21,7 @@
       }
     
       const cacheDOM = () => {
-          DOM.container = document.querySelector( '.user-list' )
+          DOM.container = document.querySelector( '.user-list' )  //RETURN THE FIRST ELEMENT that matches .user-list class.
           //Add New Button
           DOM.addNewUserButtonEl = DOM.container.querySelector('.user-list__add-new-user')
           //List of users wrapper
