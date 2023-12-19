@@ -37,7 +37,7 @@
             li.textContent = newName;  // gets text from newName.
             newNamesList.appendChild(li);  // creates a child list 
             newNameInput.value = "";  // The name is displayed
-            addedNames.push(newName);
+            addedNames.push(newName); //if the name is not repeated it will be displayed.
         }
     });
 })();
