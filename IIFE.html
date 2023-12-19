@@ -19,43 +19,6 @@
     <ul id="newNamesList">
         <!-- New names will be displayed here -->
     </ul>
-
-    <script>
-        (function () {
-            // Static array of names
-            const names = ["Ram", "shyam"];
-
-            // Button click event
-            const showNamesButton = document.getElementById("showNamesButton");
-            const namesList = document.getElementById("namesList");
-            showNamesButton.addEventListener("click", function () {
-                // Display the first two names
-                namesList.innerHTML = "";
-                for (let i = 0; i < 2; i++) {
-                    const li = document.createElement("li");
-                    li.textContent = names[i];
-                    namesList.appendChild(li);
-                    newNamesList.appendChild(li);
-                }
-                
-            });
-            const nameForm = document.getElementById("nameForm");
-            const newNameInput = document.getElementById("newName");
-            const newNamesList = document.getElementById("newNamesList");
-
-            // Form submit event
-
-            nameForm.addEventListener("submit", function (event) {
-                event.preventDefault();
-                const newName = newNameInput.value;
-                if (newName) {
-                    const li = document.createElement("li");
-                    li.textContent = newName;
-                    newNamesList.appendChild(li);
-                    newNameInput.value = "";
-                }
-            });
-        })();
-    </script>
+    <script src="./IIFE.js">
 </body>
 </html>
