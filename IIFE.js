@@ -31,12 +31,13 @@
 
     nameForm.addEventListener("submit", function (event) {   //event handler for submit button 
         event.preventDefault();
-        const newName = newNameInput.value;     //the names written in newNameInput will be stored in newName.
-        if (newName) {
+        const newName = newNameInput.value.trim();     //the names written in newNameInput will be stored in newName.
+        if (newName && !addedNames.includes(newName)) {
             const li = document.createElement("li"); //creates a list element in li
             li.textContent = newName;  // gets text from newName.
             newNamesList.appendChild(li);  // creates a child list 
             newNameInput.value = "";  // The name is displayed
+            addedNames.push(newName);
         }
     });
 })();
