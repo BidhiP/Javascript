@@ -12,6 +12,7 @@
               
               return !addedNames.includes(names);  //checks if the names are repeated or not and add the other names in it.
             })
+            // Display the first two names
             namesList.innerHTML = "";
         for (let i = 0; i < uniNames.length; i++) {
             const li = document.createElement("li");   //creates list element in li.
@@ -20,7 +21,6 @@
             addedNames.push(uniNames[i]); // pushes the names in addedNames.
             newNamesList.appendChild(li);  //displays the names written in form by creating a new list as a child.
         }
-            // Display the first two names
         
     });
     const nameForm = document.getElementById("nameForm");  // gets data from id "nameForm" and keep it on nameForm.
