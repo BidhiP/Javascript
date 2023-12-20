@@ -33,11 +33,15 @@
         event.preventDefault();
         const newName = newNameInput.value;     //the names written in newNameInput will be stored in newName.
         if (newName && !addedNames.includes(newName)) {
-            const li = document.createElement("li"); //creates a list element in li.
-            li.textContent = newName;  // gets text from newName.
-            newNamesList.appendChild(li);  // creates a child list.
-            newNameInput.value = "";  // The name is displayed.
-            addedNames.push(newName); //if the name is not repeated it will be displayed.
+                const li = document.createElement("li"); //creates a list element in li.
+                li.textContent = newName;  // gets text from newName.
+                newNamesList.appendChild(li);  // creates a child list.
+                newNameInput.value = "";  // The name is displayed.
+                addedNames.push(newName);
+                
+        }
+        else if (addedNames.includes(newName)) {   // message is popped up when name is same.
+            alert("Name already added. Please enter a different name.");
         }
     });
 })();
