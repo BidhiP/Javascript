@@ -26,6 +26,7 @@
     const nameForm = document.getElementById("nameForm");  // gets data from id "nameForm" and keep it on nameForm.
     const newNameInput = document.getElementById("newName"); // gets data from id "newName" and put it on newNameInput.
     const newNamesList = document.getElementById("newNamesList"); //gets data from id "newNameList" and put it on newNameList.
+    const nameErorMessage = document.getElementById("nameErrorMessage"); //names in the error message is checked.
 
     // Form submit event
 
@@ -38,10 +39,11 @@
                 newNamesList.appendChild(li);  // creates a child list.
                 newNameInput.value = "";  // The name is displayed.
                 addedNames.push(newName);
+                nameErrorMessage.textContent = ""; //if there is previous error it is cleared.
                 
         }
         else if (addedNames.includes(newName)) {   // message is popped up when name is same.
-            alert("Name already added. Please enter a different name.");
+            nameErrorMessage.textContent = "Name already added. Please enter a different name.";
         }
     });
 })();
